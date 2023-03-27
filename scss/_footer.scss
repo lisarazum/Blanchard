@@ -1,0 +1,132 @@
+.footer {
+  background-color: var(--color-black);
+  @include big-mobile {
+    padding-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+
+    @include big-mobile {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  
+  &__img {
+    margin-top: 3px;
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+  
+  &__logo-link {
+    display: inline-block;
+    margin-right: auto;
+    width: 173px;
+    transition: all .3s ease-in-out;
+
+    &:focus:not(:hover) {
+      outline: 2px solid var(--color-purple);
+      outline-offset: 5px;
+      cursor: pointer;
+    }
+
+    @include for-desktop {
+      &:hover {
+        outline: 2px solid var(--color-purple);
+        outline-offset: 5px;
+        cursor: pointer;
+      }
+      &:active {
+        outline: 2px solid var(--color-purple);
+        outline-offset: 5px;
+      }
+    }
+    @include big-mobile {
+      margin-right: 0;
+    }
+    @include mobile {
+      width: 96px;
+    }
+  }
+  
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include big-mobile {
+      margin-top: 20px;
+		  margin-bottom: 20px;
+    }
+    @include mobile {
+      margin-top: -3px;
+		  margin-bottom: 16px;
+    }
+  }
+  
+  &__item:not(:last-child) {
+    margin-right: 20px;
+
+    @include tablet {
+      margin-right: 30px;
+    }
+  }
+  
+  &__link {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+
+    &:focus:not(:hover) {
+      opacity: 1;
+    }
+
+    @include for-desktop {
+      &:hover {
+        opacity: 1;
+      }
+    }
+    @include tablet {
+      width: 60px;
+      height: 60px;
+    }
+    @include mobile {
+      width: 49px;
+      height: 49px;
+    }
+  }
+  
+  &__link--vk {
+    background-image: url('../img/vk.svg');
+  }
+  
+  &__link--insta {
+    background-image: url('../img/instagram.svg');
+  }
+  
+  &__link--fb {
+    background-image: url('../img/fb.svg');
+  }
+  
+  &__link:active.footer--vk {
+    background-image: url('../img/vk-active.svg');
+    opacity: 1;
+  }
+  
+  &__link:active.footer--insta {
+    background-image: url('../img/instagram-active.svg');
+  }
+  
+  &__link:active.footer--fb {
+    background-image: url('../img/fb-active.svg');
+  }
+}

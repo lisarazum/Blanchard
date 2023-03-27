@@ -1,0 +1,314 @@
+.contacts {
+  border-top: 1px solid #CACACA;
+  padding-bottom: 0;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    min-height: 154px;
+
+    @include big-desktop {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 43px 0;
+    }
+    @include tablet {
+      padding-top: 46px;
+      padding-bottom: 40px;
+    }
+    @include mobile {
+      padding-top: 0;
+      padding-bottom: 16px;
+    }
+  }
+  
+  &__place {
+    margin-left: -4px;
+    margin-right: 5%;
+
+    @include big-desktop {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    @include tablet {
+      margin-bottom: 31px;
+    }
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+  
+  &__heading {
+    margin-top: -4px;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+  
+  &__address {
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+
+    @include mobile {
+      margin-top: -2px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+  
+  &__form {
+    margin-right: 5.1%;
+    @include big-desktop {
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__links {
+    min-width: 275px;
+  }
+  
+  &__connect {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include tablet {
+      margin-bottom: 6px;
+    }
+
+    @include mobile {
+      margin-bottom: 7px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+  
+  &__list {
+    display: flex;
+  }
+  
+  &__item:not(:last-child) {
+    margin-right: 16px;
+    margin-left: 1px;
+
+    @include tablet {
+      margin-right: 21px;
+      margin-left: 0;
+    }
+  }
+  
+  &__link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: opacity .3s ease-in-out;
+
+    &:focus:not(:hover) {
+      opacity: 0.5;
+    }
+
+    @include for-desktop {
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:active {
+        border: 1px solid #9643A4;
+        border-radius: 100px;
+      }
+    }
+    @include mobile {
+      width: 50px;
+      height: 50px;
+      background-size: 100%;
+    }
+
+    &--watsup {
+      background-image: url('../img/watsapp.svg');
+    }
+    
+    &--telegram {
+      background-image: url('../img/telegram.svg');
+    }
+  }
+
+  &__map {
+    height: 700px;
+
+    @include mobile {
+      height: 320px;
+    }
+  }
+}
+
+
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include small-tablet {
+    justify-content: space-between;
+  }
+
+  &__label {
+    @include tablet {
+      margin-bottom: 28px;
+    }
+    @include small-tablet {
+      margin-bottom: 13px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    margin-right: 20px;
+    padding: 9px 24px;
+    width: 270px;
+    height: 50px;
+    border: 1px solid var(--color-dark);
+    border-radius: 100px;
+    color: var(--color-grey);
+    transition: background-color .3s ease-in-out;
+
+    &:focus:not(:hover) {
+      background-color: #EAEAEA;
+    }
+
+    @include for-desktop {
+      &:hover {
+        background-color: #EAEAEA;
+      }
+    }
+    @include small-tablet {
+      margin-right: 0;
+      width: 324px;
+    }
+    @include mobile {
+      width: 290px;
+      height: 40px;
+    }
+  }
+  
+  &__input:active {
+    color: var(--color-black);
+  }
+
+  &__btn {
+    position: relative;
+    padding: 6px;
+    min-width: 329px;
+    min-height: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--color-purple);
+    border: 2px solid var(--color-purple);
+    border-radius: 100px;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+    &:focus:not(:hover)::after {
+      opacity: 1;
+    }
+
+    @include for-desktop {
+      &:hover {
+        background-color: var(--color-purple);
+        color: var(--color-white);
+      }
+    }
+    @include tablet {
+      margin-bottom: 28px;
+      min-width: 344px;
+    }
+    @include small-tablet {
+      min-width: 317px;
+    }
+    @include mobile {
+      margin-bottom: 18px;
+      min-width: 128px;
+      min-height: 41px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &-mobile {
+      display: none;
+      @include mobile {
+        display: inline-block;
+      }
+    }
+
+    &-desktop {
+      @include mobile {
+        display: none;
+      }
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: -15%;
+      left: -8px;
+      width: 105%;
+      height: 132%;
+      border: 2px solid var(--color-purple);
+      border-radius: 100px;
+      opacity: 0;
+    }
+    
+    &:active {
+      background-color: var(--color-dark-purple);
+      color: var(--color-white);
+    }
+  }
+}
+
+.just-validate-tooltip-container {
+  position: relative;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: -21px;
+  left: 23px;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: #D11616;
+}
+
+.ymaps-2-1-79-ground-pane {
+  filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}
+
+@include big-mobile {
+  // .ymaps-2-1-79-controls__control {
+  //   display: none !important;
+  // }
+}

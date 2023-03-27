@@ -1,0 +1,247 @@
+.projects {
+  &__paragraph {
+    margin-bottom: 20px;
+
+    @include small-tablet {
+      margin-bottom: 28px;
+    }
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: var(--color-purple);
+    transition: color .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s ease-in-out;
+    }
+    
+    &:focus:not(:hover) {
+      background-color: var(--color-purple);
+      color: var(--color-white);
+    }
+
+    @include for-desktop {
+      :hover {
+        color: var(--color-purple);
+
+        &::after {
+          border-color: var(--color-purple);
+        }
+      }
+
+      &:active {
+        color: var(--color-dark-purple);
+        &::after {
+          border-color: var(--color-purple);
+        }
+      }
+    }
+  }
+  
+  &-partners {
+    &__title {
+      margin: 0;
+      margin-bottom: 23px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--color-dark);
+
+      @include mobile {
+        margin-bottom: 11px;
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+
+    &__slider {
+      position: relative;
+      padding: 0 48px;
+      @include big-mobile {
+        padding: 0 30px;
+      }
+    }
+
+    &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      width: 100%;
+      height: 120px;
+      border: 1px solid var(--color-dark-grey);
+      transition: all .3s ease;
+
+      @include for-desktop {
+        &:hover {
+          border-color: var(--color-purple);
+
+          & .projects-partners__img {
+            filter: grayscale(0);
+            opacity: 1;
+          }
+        }
+      }
+      @include small-desktop {
+        height: 100px;
+      }
+    }
+
+    &__img {
+      filter: grayscale(100%);
+      opacity: .8;
+      transition: all .3s ease;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 33%;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid var(--color-dark-grey);
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:focus:not(:hover) {
+        border-color: var(--color-purple);
+      }
+
+      @include for-desktop {
+        &:hover {
+          background-color: var(--color-purple);
+          border-color: var(--color-purple);
+
+          &::after {
+            border-bottom-color: var(--color-white);
+            border-left-color: var(--color-white);
+          }
+        }
+      }
+      @include big-mobile {
+        top: 38%;
+        width: 25px;
+        height: 25px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 11px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-bottom: 1px solid var(--color-dark-grey);
+        border-left: 1px solid var(--color-dark-grey);
+        transition: all .3s ease;
+
+        @include big-mobile {
+          top: 7px;
+          width: 9px;
+          height: 9px;
+        }
+      }
+    }
+
+    &__prev-btn {
+      left: 0;
+
+      &::after {
+        left: 14px;
+        transform: rotate(45deg);
+        @include big-mobile {
+          left: 9px;
+        }
+      }
+    }
+
+    &__next-btn {
+      right: 0;
+
+      &::after {
+        right: 14px;
+        transform: rotate(-135deg);
+        @include big-mobile {
+          right: 9px;
+        }
+      }
+    }
+  }
+
+
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-bottom: -3px;
+  margin-left: -1px;
+  margin-right: 3px;
+  width: 16px;
+  height: 16px;
+  background-image: url('../img/tooltip.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: none;
+  transition: background-image .3s ease-in-out;
+
+
+
+  &:focus:not(:hover) {
+		background-image: url('../img/tooltip-focus.svg');
+	}
+
+  @include for-desktop {
+    &:hover {
+      background-image: url('../img/tooltip-hover.svg');
+    }
+
+    &:active {
+      background-image: url('../img/tooltip-active.svg');
+    }
+  }
+}
+
+@include for-desktop {
+  .tooltip--1:hover::before,
+	.tooltip--1:hover::after {
+		display: block;
+	}
+}
+
+.tippy-box[data-theme~='tooltip'] {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  border-radius: 0;
+  text-align: center;
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='top']>.tippy-arrow::before {
+  border-top-color: var(--color-purple);
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='bottom']>.tippy-arrow::before {
+  border-bottom-color: var(--color-purple);
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='left']>.tippy-arrow::before {
+  border-left-color: var(--color-purple);
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='right']>.tippy-arrow::before {
+  border-right-color: var(--color-purple);
+}

@@ -1,0 +1,153 @@
+.hero {
+  position: relative;
+  background-color: #000000;
+
+  &__container {
+    height: 100%;
+  }
+  
+  &__swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &__swiper .hero__swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  &__info {
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 122px;
+    max-width: 50%;
+    z-index: 5;
+
+    @include small-desktop {
+      padding-top: 23.2%;
+    }
+
+    @include tablet {
+      max-width: 100%;
+      padding-bottom: 112px;
+    }
+
+    @include small-tablet {
+      padding-top: 31.9%;
+      padding-bottom: 114px;
+    }
+
+    @include big-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20.9%;
+      padding-bottom: 60px;
+    }
+
+    @include mobile {
+      padding-top: 26.9%;
+      padding-bottom: 44px;
+    }
+  }
+  
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 82px;
+    color: var(--color-white);
+
+    @include tablet {
+      margin-bottom: 10px;
+      line-height: 83px;
+    }
+
+    @include big-mobile {
+      margin-bottom: 16px;
+      font-size: 47px;
+      line-height: 60px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 11px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+  
+  &__paragraph {
+    margin-bottom: 92px;
+    max-width: 75%;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--color-white);
+
+    @include tablet {
+      margin-bottom: 134px;
+    }
+
+    @include small-tablet {
+      max-width: 100%;
+    }
+
+    @include big-mobile {
+      margin-bottom: 100px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 40px;
+      max-width: 90%;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  
+  &__btn {
+    padding: 23px 35px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    border-radius: 100px;
+    outline: 3px solid transparent;
+    transition: outline .3s ease-in;
+
+    &:focus:not(:hover) {
+      outline: 2px solid var(--color-light-purple);
+      outline-offset: 5px;
+    }
+
+    @include for-desktop {
+      &:hover {
+        outline: 3px solid var(--color-light-purple);
+      }
+
+      &:active {
+        background-color: var(--color-dark-purple);
+        outline: 3px solid var(--color-light-purple);
+      }
+    }
+
+    @include mobile {
+      padding: 13px 19px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+

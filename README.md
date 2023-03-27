@@ -1,5 +1,3 @@
 # Blanchard
-Here's my course project, from Skillbox
-
-You can also visit the web version
-http://diplomalizarazum.tmweb.ru/
+Сборку запускаем командой: npm run dev
+Перед отправкой на прод делаем: npm run build

@@ -1,0 +1,277 @@
+@include small-desktop {
+	.header-top {
+		&__burger {
+			position: relative;
+			margin-right: auto;
+			margin-left: -19px;
+			width: 36px;
+			height: 28px;
+			display: block;
+			z-index: 107;
+
+			@include big-mobile {
+				width: 25px;
+				height: 18px;
+			}
+
+			@include mobile {
+				margin-top: -1px;
+				margin-left: -13px;
+			}
+
+			& span,
+			&::after,
+			&::before {
+				position: absolute;
+				height: 3.65px;
+				width: 100%;
+				background-color: var(--color-white);
+				transition: 0.5s;
+
+				@include big-mobile {
+					height: 2px;
+				}
+			}
+
+			&::after,
+			&::before {
+				content: '';
+			}
+
+			& span {
+				top: 13px;
+				width: 29px;
+
+				@include big-mobile {
+					top: 9px;
+					width: 16px;
+				}
+
+				@include mobile {
+					top: 8px;
+				}
+			}
+
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				top: 25px;
+				width: 24px;
+
+				@include big-mobile {
+					top: 18px;
+					width: 10px;
+				}
+
+				@include mobile {
+					top: 16px;
+				}
+			}
+
+			/* burger-effects */
+			&.open-menu span {
+				opacity: 0;
+				transition: 0.5s;
+			}
+
+			&.open-menu::before {
+				width: 37px;
+				top: 14px;
+				left: -5px;
+				transform: rotate(-45deg) translateX(14px) translateY(14px);
+				transition: 0.5s;
+
+				@include big-mobile {
+					width: 15px;
+				}
+			}
+
+			&.open-menu::after {
+				width: 37px;
+				top: 14px;
+				left: -4px;
+				transform: rotate(46deg) translateX(14px) translateY(-14px);
+				transition: 0.5s;
+
+				@include big-mobile {
+					width: 15px;
+				}
+			}
+		}
+
+		&__login {
+			position: relative;
+			display: inline-block;
+			margin-left: 139px;
+			text-align: center;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: -19px;
+				left: -89px;
+				width: 257px;
+				height: 60px;
+				border: 2px solid var(--color-purple);
+				border-radius: 100px;
+			}
+		}
+
+		&__search {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+
+			@include tablet {
+        margin-right: 0;
+      }
+
+			@include big-mobile {
+				width: 22px;
+				height: 22px;
+			}
+		}
+	
+		&__lens {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background-image: url('../img/search.svg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 100%;
+			transition: opacity .3s ease-in-out;
+
+			@include mobile {
+				width: 18px;
+				height: 18px;
+      }
+		}
+
+		&__form {
+			position: absolute;
+			top: 39%;
+			right: 6%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			display: none;
+		
+			@include big-mobile {
+				top: -15%;
+				height: 45px;
+			}
+
+			@include mobile {
+				top: 3%;
+				height: 75px;
+				background-color: rgba(0, 0, 0, 0.9);
+      }
+		}
+	}
+}
+
+.btn-hidden {
+	display: none;
+}
+
+.form-search__search {
+	position: absolute;
+	top: -3px;
+	left: -39px;
+	margin-right: 2%;
+	width: 30px;
+	height: 30px;
+	background-image: url('../img/search.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+
+	@include mobile {
+		top: 50%;
+		left: 17.7%;
+		width: 18px;
+		height: 19px;
+	}
+}
+
+.form-search__input {
+	margin-right: 5%;
+	min-width: 230px;
+	background-color: transparent;
+	color: var(--color-white);
+	border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+	outline: none;
+
+	@include tablet {
+		margin-right: 0;
+		min-width: 200px;
+	}
+
+	@include big-mobile {
+		left: 17%;
+		min-width: 66%;
+	}
+
+	@include mobile {
+		left: 24%;
+		min-width: 50%;
+	}
+}
+
+.form-search__close {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+
+	@include mobile {
+		top: 9%;
+		right: 3%;
+	}
+}
+
+.form-search__close::before,
+.form-search__close::after {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 2px;
+	background-color: var(--color-white);
+
+	@include mobile {
+		width: 19px;
+		height: 2px;
+	}
+}
+
+.form-search__close::before {
+	transform: rotate(45deg) translateX(-5px) translateY(3px);
+}
+
+.form-search__close::after {
+	transform: rotate(-45deg) translateX(-3px) translateY(-5px);
+}
+
+@keyframes FormOpen {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes FormClose {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(100%);
+	}
+}

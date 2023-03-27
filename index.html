@@ -17,7 +17,7 @@
 	<script src="https://unpkg.com/tippy.js@6" defer></script>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
-	<script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU"></script>
+	<script defer src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU"></script>
 </head>
 
 <body>
@@ -36,7 +36,6 @@
 						<li class="header-top__item"><a href="#galery" class="header-top__link">Галерея</a></li>
 						<li class="header-top__item"><a href="#catalogue" class="header-top__link">Каталог</a></li>
 						<li class="header-top__item"><a href="#events" class="header-top__link">События</a></li>
-						<li class="header-top__item"><a href="#" class="header-top__link">Издания</a></li>
 						<li class="header-top__item"><a href="#projects" class="header-top__link">Проекты</a></li>
 						<li class="header-top__item"><a href="#contacts" class="header-top__link">Контакты</a></li>
 					</ul>
@@ -189,10 +188,10 @@
 			</div>
 		</section>
 
-		<section id="about" class="about">
+		<section id="about" class="section about">
 			<div class="container">
 				<h2 class="title about__title">О&nbsp;нас</h2>
-				<p class="paragraph about__paragraph">Ясность нашей позиции очевидна: семантический разбор внешних
+				<p class="paragraph section-paragraph about__paragraph">Ясность нашей позиции очевидна: семантический разбор внешних
 					противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо
 					распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный
 					прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития.
@@ -204,7 +203,7 @@
 			</div>
 		</section>
 
-		<section id="galery" class="galery">
+		<section id="galery" class="section galery">
 			<div class="container galery__container">
 				<div class="galery__block">
 					<div class="galery__filter">
@@ -247,7 +246,7 @@
 								<button class="btn-reset galery__btn galery__next" aria-label="К следующему слайду"></button>
 							</div>
 							<div class="swiper-wrapper galery__swiper-wrapper">
-								<a class="swiper-slide galery__swiper-slide" href="#">
+								<a href="#" class="swiper-slide galery__swiper-slide" data-modal="1">
 									<picture>
 										<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_1_320.jpg">
 										<source media="(max-width: 768px)" srcset="img/galery_1_768.jpg">
@@ -255,7 +254,7 @@
 										<img src="img/galery_1.jpg" alt="Картины, представленные в галлерее" class="galery__img">
 									</picture>
 								</a>
-								<a class="swiper-slide galery__swiper-slide" href="#">
+								<a href="#" class="swiper-slide galery__swiper-slide" data-modal="2">
 									<picture>
 										<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_2_320.jpg">
 										<source media="(max-width: 768px)" srcset="img/galery_2_768.jpg">
@@ -263,7 +262,7 @@
 										<img src="img/galery_2.jpg" alt="Картины, представленные в галлерее" class="galery__img">
 									</picture>
 								</a>
-								<a class="swiper-slide galery__swiper-slide" href="#">
+								<a href="#" class="swiper-slide galery__swiper-slide" data-modal="3">
 									<picture>
 										<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_3_320.jpg">
 										<source media="(max-width: 768px)" srcset="img/galery_3_768.jpg">
@@ -271,7 +270,7 @@
 										<img src="img/galery_3.jpg" alt="Картины, представленные в галлерее" class="galery__img">
 									</picture>
 								</a>
-								<a class="swiper-slide galery__swiper-slide" href="#">
+								<a href="#" class="swiper-slide galery__swiper-slide" data-modal="4">
 									<picture>
 										<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_4_320.jpg">
 										<source media="(max-width: 768px)" srcset="img/galery_4_768.jpg">
@@ -279,7 +278,7 @@
 										<img src="img/galery_4.jpg" alt="Картины, представленные в галлерее" class="galery__img">
 									</picture>
 								</a>
-								<a class="swiper-slide galery__swiper-slide" href="#">
+								<a href="#" class="swiper-slide galery__swiper-slide" data-modal="5">
 									<picture>
 										<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_5_320.jpg">
 										<source media="(max-width: 768px)" srcset="img/galery_5_768.jpg">
@@ -287,7 +286,7 @@
 										<img src="img/galery_5.jpg" alt="Картины, представленные в галлерее" class="galery__img">
 									</picture>
 								</a>
-								<a class="swiper-slide galery__swiper-slide" href="#">
+								<a href="#" class="swiper-slide galery__swiper-slide" data-modal="6">
 									<picture>
 										<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_6_320.jpg">
 										<source media="(max-width: 768px)" srcset="img/galery_6_768.jpg">
@@ -302,17 +301,17 @@
 			</div>
 		</section>
 
-		<section id="catalogue" class="catalogue">
+		<section id="catalogue" class="section catalogue">
 			<div class="container">
 				<h2 class="title catalogue__title">Каталог</h2>
-				<p class="paragraph catalogue__paragraph">Акционеры крупнейших компаний, которые представляют собой яркий пример
+				<p class="paragraph section-paragraph catalogue__paragraph">Акционеры крупнейших компаний, которые представляют собой яркий пример
 					континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы
 					этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
 					нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на
 					независимые элементы. </p>
 				<div class="catalogue__block">
 					<div class="catalogue__desk catalogue-desk">
-						<div class="slider slider--zero" data-target="six">
+						<div class="catalogue-desk__slider catalogue-desk__slider--zero" data-target="six">
 							<picture>
 								<source media="(min-width: 320px) and (max-width: 540px)" srcset="img/catalogue_0_320.jpg">
 								<source media="(max-width: 768px)" srcset="img/catalogue_0_768.jpg">
@@ -324,7 +323,7 @@
 								что посмотреть!</p>
 							<a href="#galery" class="catalogue-desk__link">В галерею</a>
 						</div>
-						<div class="slider slider--one slider--active" data-target="seven">
+						<div class="catalogue-desk__slider catalogue-desk__slider--one catalogue-desk__slider--active" data-target="seven">
 							<picture>
 								<source media="(min-width: 320px) and (max-width: 540px)" srcset="img/catalogue_1_320.jpg">
 								<source media="(max-width: 768px)" srcset="img/catalogue_1_768.jpg">
@@ -339,7 +338,7 @@
 								Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь
 								библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
 						</div>
-						<div class="slider slider--two" data-target="eight">
+						<div class="catalogue-desk__slider catalogue-desk__slider--two" data-target="eight">
 							<picture>
 								<source media="(min-width: 320px) and (max-width: 540px)" srcset="img/catalogue_2_320.jpg">
 								<source media="(max-width: 768px)" srcset="img/catalogue_2_768.jpg">
@@ -356,7 +355,7 @@
 								творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его
 								персонажей напоминают произведения Джованни да Милано.</p>
 						</div>
-						<div class="slider slider--three" data-target="nine">
+						<div class="catalogue-desk__slider catalogue-desk__slider--three" data-target="nine">
 							<picture>
 								<source media="(min-width: 320px) and (max-width: 540px)" srcset="img/catalogue_3_320.jpg">
 								<source media="(max-width: 768px)" srcset="img/catalogue_3_768.jpg">
@@ -464,7 +463,7 @@
 									<div class="accordion__right">
 										<h4 class="title accordion__heading">Здесь пока пусто</h4>
 										<p class="paragraph accordion__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-										<a href="#galery" class="accordion__link">В галерею</a>
+										<a href="#galery" class="catalogue-desk__link">В галерею</a>
 									</div>
 								</div>
 							</li>
@@ -477,7 +476,7 @@
 									<div class="accordion__right">
 										<h4 class="title accordion__heading">Здесь пока пусто</h4>
 										<p class="paragraph accordion__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-										<a href="#galery" class="accordion__link">В галерею</a>
+										<a href="#galery" class="catalogue-desk__link">В галерею</a>
 									</div>
 								</div>
 							</li>
@@ -490,7 +489,7 @@
 									<div class="accordion__right">
 										<h4 class="title accordion__heading">Здесь пока пусто</h4>
 										<p class="paragraph accordion__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-										<a href="#galery" class="accordion__link">В галерею</a>
+										<a href="#galery" class="catalogue-desk__link">В галерею</a>
 									</div>
 								</div>
 							</li>
@@ -503,7 +502,7 @@
 									<div class="accordion__right">
 										<h4 class="title accordion__heading">Здесь пока пусто</h4>
 										<p class="paragraph accordion__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-										<a href="#galery" class="accordion__link">В галерею</a>
+										<a href="#galery" class="catalogue-desk__link">В галерею</a>
 									</div>
 								</div>
 							</li>
@@ -516,7 +515,7 @@
 									<div class="accordion__right">
 										<h4 class="title accordion__heading">Здесь пока пусто</h4>
 										<p class="paragraph accordion__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-										<a href="#galery" class="accordion__link">В галерею</a>
+										<a href="#galery" class="catalogue-desk__link">В галерею</a>
 									</div>
 								</div>
 							</li>
@@ -529,7 +528,7 @@
 									<div class="accordion__right">
 										<h4 class="title accordion__heading">Здесь пока пусто</h4>
 										<p class="paragraph accordion__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-										<a href="#galery" class="accordion__link">В галерею</a>
+										<a href="#galery" class="catalogue-desk__link">В галерею</a>
 									</div>
 								</div>
 							</li>
@@ -539,7 +538,7 @@
 			</div>
 		</section>
 
-		<section id="events" class="events">
+		<section id="events" class="section events">
 			<div class="container events__container">
 				<h2 class="title events__title">События</h2>
 				<div class="swiper events__swiper">
@@ -551,14 +550,16 @@
 								<source media="(max-width: 1024px)" srcset="img/events_1_1024.jpg">
 								<img src="img/events_1.jpg" alt="Книжная гравюра в живом восприятии" class="events-card__img">
 							</picture>
-							<div class="events-card__date-block">
-								<span class="events-card__place">Музей им. Щусева</span>
-								<span class="events-card__date">с 20 марта по 30 апреля</span>
+							<div class="events-card__block">
+								<div class="events-card__date-block">
+									<span class="events-card__place">Музей им. Щусева</span>
+									<span class="events-card__date">с 20 марта по 30 апреля</span>
+								</div>
+								<h3 class="title events-card__title">Книжная гравюра в живом восприятии</h3>
+								<p class="paragraph events-card__paragraph">Один из&nbsp;ведущих флорентийских художников Кватроченто,
+									основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
+								<a href="#" class="events-card__link">Подробнее</a>
 							</div>
-							<h3 class="title events-card__title">Книжная гравюра в живом восприятии</h3>
-							<p class="paragraph events-card__paragraph">Один из&nbsp;ведущих флорентийских художников Кватроченто,
-								основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
-							<a href="#" class="events-card__link">Подробнее</a>
 						</div>
 						<div class="swiper-slide events-card">
 							<picture>
@@ -567,15 +568,17 @@
 								<source media="(max-width: 1024px)" srcset="img/events_2_1024.jpg">
 								<img src="img/events_2.jpg" alt="«Открытая дискуссия». Дмитрий Петров и Сергей Ильин." class="events-card__img">
 							</picture>
-							<div class="events-card__date-block">
-								<span class="events-card__place">ММОМА</span>
-								<span class="events-card__date">24 марта 19:00</span>
+							<div class="events-card__block">
+								<div class="events-card__date-block">
+									<span class="events-card__place">ММОМА</span>
+									<span class="events-card__date">24 марта 19:00</span>
+								</div>
+								<h3 class="title events-card__title">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.
+								</h3>
+								<p class="paragraph events-card__paragraph">Высокий уровень вовлечения представителей целевой аудитории
+									является четким доказательством простого факта.</p>
+								<a href="#" class="events-card__link">Подробнее</a>
 							</div>
-							<h3 class="title events-card__title">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.
-							</h3>
-							<p class="paragraph events-card__paragraph">Высокий уровень вовлечения представителей целевой аудитории
-								является четким доказательством простого факта.</p>
-							<a href="#" class="events-card__link">Подробнее</a>
 						</div>
 						<div class="swiper-slide events-card">
 							<picture>
@@ -584,14 +587,16 @@
 								<source media="(max-width: 1024px)" srcset="img/events_3_1024.jpg">
 								<img src="img/events_3.jpg" alt="Выставка «Формация 2020»" class="events-card__img">
 							</picture>
-							<div class="events-card__date-block">
-								<span class="events-card__place">Еврейский музей</span>
-								<span class="events-card__date">с 31 марта по 21 апреля</span>
+							<div class="events-card__block">
+								<div class="events-card__date-block">
+									<span class="events-card__place">Еврейский музей</span>
+									<span class="events-card__date">с 31 марта по 21 апреля</span>
+								</div>
+								<h3 class="title events-card__title">Выставка &laquo;Формация 2020&raquo;</h3>
+								<p class="paragraph events-card__paragraph">Идейные соображения высшего порядка, а&nbsp;также современная
+									методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.</p>
+								<a href="#" class="events-card__link">Подробнее</a>
 							</div>
-							<h3 class="title events-card__title">Выставка &laquo;Формация 2020&raquo;</h3>
-							<p class="paragraph events-card__paragraph">Идейные соображения высшего порядка, а&nbsp;также современная
-								методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.</p>
-							<a href="#" class="events-card__link">Подробнее</a>
 						</div>
 						<div class="swiper-slide events-card">
 							<picture>
@@ -601,15 +606,17 @@
 								<img src="img/events_4.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»"
 									class="events-card__img">
 							</picture>
-							<div class="events-card__date-block">
-								<span class="events-card__place">ММАМ</span>
-								<span class="events-card__date">с 8 апреля по 20 мая</span>
+							<div class="events-card__block">
+								<div class="events-card__date-block">
+									<span class="events-card__place">ММАМ</span>
+									<span class="events-card__date">с 8 апреля по 20 мая</span>
+								</div>
+								<h3 class="title events-card__title">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
+								</h3>
+								<p class="paragraph events-card__paragraph">Один из&nbsp;ведущих флорентийских художников Кватроченто,
+									основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
+								<a href="#" class="events-card__link">Подробнее</a>
 							</div>
-							<h3 class="title events-card__title">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
-							</h3>
-							<p class="paragraph events-card__paragraph">Один из&nbsp;ведущих флорентийских художников Кватроченто,
-								основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
-							<a href="#" class="events-card__link">Подробнее</a>
 						</div>
 						<div class="swiper-slide events-card">
 							<picture>
@@ -619,14 +626,16 @@
 								<img src="img/events_5.jpg" alt="XXIV Международная биеннале молодого искусства"
 									class="events-card__img">
 							</picture>
-							<div class="events-card__date-block">
-								<span class="events-card__place">Третьяковка на Крымском валу</span>
-								<span class="events-card__date">с 30 марта по 30 апреля</span>
+							<div class="events-card__block">
+								<div class="events-card__date-block">
+									<span class="events-card__place">Третьяковка на Крымском валу</span>
+									<span class="events-card__date">с 30 марта по 30 апреля</span>
+								</div>
+								<h3 class="title events-card__title">XXIV Международная биеннале молодого искусства</h3>
+								<p class="paragraph events-card__paragraph">Внезапно, реплицированные с&nbsp;зарубежных источников,
+									современные исследования.</p>
+								<a href="#" class="events-card__link">Подробнее</a>
 							</div>
-							<h3 class="title events-card__title">XXIV Международная биеннале молодого искусства</h3>
-							<p class="paragraph events-card__paragraph">Внезапно, реплицированные с&nbsp;зарубежных источников,
-								современные исследования.</p>
-							<a href="#" class="events-card__link">Подробнее</a>
 						</div>
 					</div>
 					<div class="events__btns">
@@ -640,10 +649,10 @@
 			</div>
 		</section>
 
-		<section id="projects" class="projects">
+		<section id="projects" class="section projects">
 			<div class="container">
 				<h2 class="title projects__title">Проекты</h2>
-				<p class="paragraph projects__paragraph">Предварительные выводы: постоянное информационно-пропагандистское
+				<p class="paragraph section-paragraph projects__paragraph">Предварительные выводы: постоянное информационно-пропагандистское
 					обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё
 					независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего
 					возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
@@ -662,49 +671,49 @@
 					<a href="#" class="projects__link">blanchard-art.ru/projects</a>
 				</p>
 
-				<h3 class="heading projects__partners">Партнёры проектов</h3>
-				<div class="projects__slider-wrap partners-slider">
-					<button class="reset-btn partners-btn partners-slider__prev js-partners-prev"
-						aria-label="К предыдущему слайду"></button>
-					<div class="partners-slider__slider js-partners-slider">
-						<div class="swiper-wrapper">
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_1.png" alt="Freelance Foundation" class="partners-slider__img">
-							</a>
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_2.png" alt="Institute for contemporary art" class="partners-slider__img">
-							</a>
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_3.png" alt="Workhouse" class="partners-slider__img">
-							</a>
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_4.png" alt="1849" class="partners-slider__img">
-							</a>
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_5.png" alt="Hiscox" class="partners-slider__img">
-							</a>
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_6.png" alt="Camden arts centre" class="partners-slider__img">
-							</a>
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_7.png" alt="Stassen" class="partners-slider__img">
-							</a>
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_8.png" alt="Watts Galery" class="partners-slider__img">
-							</a>
-							<a href="#" class="swiper-slide partners-slider__slide">
-								<img src="img/partners_9.png" alt="esad" class="partners-slider__img">
-							</a>
-						</div>
+				<h3 class="heading projects-partners__title">Партнёры проектов</h3>
+				<div class="swiper projects-partners__slider">
+					<div class="swiper-wrapper projects-partners__slider-wrap">
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_1.png" alt="Freelance Foundation" class="projects-partners__img">
+						</a>
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_2.png" alt="Institute for contemporary art" class="projects-partners__img">
+						</a>
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_3.png" alt="Workhouse" class="projects-partners__img">
+						</a>
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_4.png" alt="1849" class="projects-partners__img">
+						</a>
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_5.png" alt="Hiscox" class="projects-partners__img">
+						</a>
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_6.png" alt="Camden arts centre" class="projects-partners__img">
+						</a>
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_7.png" alt="Stassen" class="projects-partners__img">
+						</a>
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_8.png" alt="Watts Galery" class="projects-partners__img">
+						</a>
+						<a href="#" class="swiper-slide projects-partners__slide">
+							<img src="img/partners_9.png" alt="esad" class="projects-partners__img">
+						</a>
 					</div>
-					<button class="reset-btn partners-btn partners-slider__next js-partners-next"
-						aria-label="К следующему слайду"></button>
+					<div class="projects-partners__btns">
+						<button class="reset-btn projects-partners__btn projects-partners__prev-btn"
+						aria-label="К предыдущему слайду"></button>
+						<button class="reset-btn projects-partners__btn projects-partners__next-btn"
+							aria-label="К следующему слайду"></button>
+					</div>
 
 				</div>
 			</div>
 		</section>
 
-		<section id="contacts" class="contacts">
+		<section id="contacts" class="section contacts">
 			<div class="container contacts__container">
 				<div class="contacts__info">
 					<div class="contacts__place">
@@ -761,7 +770,102 @@
 				</li>
 			</ul>
 		</div>
-	</footer>
+	</footer> 
+	<div class="overlay"></div>
+
+	<!--modals-->
+	<div class="galery-modal" data-modal="1">
+		<picture>
+			<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_1_320.jpg">
+			<source media="(max-width: 768px)" srcset="img/galery_1_768.jpg">
+			<source media="(max-width: 1024px)" srcset="img/galery_1_1024.jpg">
+			<img src="img/galery_1.jpg" alt="Картины, представленные в галлерее" class="galery-modal__img">
+		</picture>
+		<div class="galery-modal__block">
+			<button class="btn-reset galery-modal__close" data-modal-close="1"></button>
+			<h2 class="heading galery-modal__heading">Казимир Малевич</h2>
+			<span class="galery-modal__painting-name">«Торс»</span>
+			<span class="galery-modal__date">1928-1929</span>
+			<p class="paragraph galery-modal__text">Продолжая идеи супрематизации человеческого образа Малевич создает эту картину, на которой изображен обезличенный торс, который больше напоминает манекен портного.</p>
+			<p class="paragraph galery-modal__text">У образа нет лица – только закрашенный темно-розовым цветом овал. Он не имеет рук – только скругленный торс, разные половины которого окрашены в разные цвета – желтый и белый. Фон, на котором изображен торс, тоже неоднороден: он состоит из кусков зеленого, розоватого и синеватого цветов.</p>
+		</div>
+	</div>
+	<div class="galery-modal" data-modal="2">
+		<picture>
+			<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_2_320.jpg">
+			<source media="(max-width: 768px)" srcset="img/galery_2_768.jpg">
+			<source media="(max-width: 1024px)" srcset="img/galery_2_1024.jpg">
+			<img src="img/galery_2.jpg" alt="Картины, представленные в галлерее" class="galery-modal__img">
+		</picture>
+		<div class="galery-modal__block">
+			<button class="btn-reset galery-modal__close" data-modal-close="2"></button>
+			<h2 class="heading galery-modal__heading">Казимир Малевич</h2>
+			<span class="galery-modal__painting-name">«Женщина с граблями»</span>
+			<span class="galery-modal__date">1931–1932</span>
+			<p class="paragraph galery-modal__text">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+		</div>
+	</div>
+	<div class="galery-modal" data-modal="3">
+		<picture>
+			<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_3_320.jpg">
+			<source media="(max-width: 768px)" srcset="img/galery_3_768.jpg">
+			<source media="(max-width: 1024px)" srcset="img/galery_3_1024.jpg">
+			<img src="img/galery_3.jpg" alt="Картины, представленные в галлерее" class="galery-modal__img">
+		</picture>
+		<div class="galery-modal__block">
+			<button class="btn-reset galery-modal__close" data-modal-close="3"></button>
+			<h2 class="heading galery-modal__heading">Казимир Малевич</h2>
+			<span class="galery-modal__painting-name">Уборка ржи</span>
+			<span class="galery-modal__date">1912</span>
+			<p class="paragraph galery-modal__text">Образы крестьянской жизни, образы сельского труда, воплощенные художником отличаются пронзительной нотой драматизма, о котором Малевичу и в голову не приходило помышлять ранее. Одной из наиболее заметных черт его постсупрематической живописи стала безликость людей; вместо лиц и голов их корпуса увенчаны красными, черными, белыми овалами.</p>
+		</div>
+	</div>
+	<div class="galery-modal" data-modal="4">
+		<picture>
+			<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_4_320.jpg">
+			<source media="(max-width: 768px)" srcset="img/galery_4_768.jpg">
+			<source media="(max-width: 1024px)" srcset="img/galery_4_1024.jpg">
+			<img src="img/galery_4.jpg" alt="Картины, представленные в галлерее" class="galery-modal__img">
+		</picture>
+		<div class="galery-modal__block">
+			<button class="btn-reset galery-modal__close" data-modal-close="4"></button>
+			<h2 class="heading galery-modal__heading">Клюн Иван</h2>
+			<span class="galery-modal__painting-name">«СУПРЕМАТИЗМ»</span>
+			<span class="galery-modal__date">1916</span>
+			<p class="paragraph galery-modal__text">«Супрематизм» – знаковая работа нового периода творчества Клюна. Ограничив число форм в картине, он концентрирует внимание главным образом на исследовании принципа их сцепления и выявлении возможностей цвета. Здесь уже появились те характерные живописно-пластические приемы, которые вскоре приведут художника к иному способу организации беспредметной картины.</p>
+		</div>
+	</div>
+	<div class="galery-modal" data-modal="5">
+		<picture>
+			<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_4_320.jpg">
+			<source media="(max-width: 768px)" srcset="img/galery_4_768.jpg">
+			<source media="(max-width: 1024px)" srcset="img/galery_4_1024.jpg">
+			<img src="img/galery_4.jpg" alt="Картины, представленные в галлерее" class="galery-modal__img">
+		</picture>
+		<div class="galery-modal__block">
+			<button class="btn-reset galery-modal__close" data-modal-close="5"></button>
+			<h2 class="heading galery-modal__heading">Казимир Малевич</h2>
+			<span class="galery-modal__painting-name">«Женщина с граблями»</span>
+			<span class="galery-modal__date">1931–1932</span>
+			<p class="paragraph galery-modal__text">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+		</div>
+	</div>
+	<div class="galery-modal" data-modal="6">
+		<picture>
+			<source media="(min-width: 320px) and (max-width: 620px)" srcset="img/galery_5_320.jpg">
+			<source media="(max-width: 768px)" srcset="img/galery_5_768.jpg">
+			<source media="(max-width: 1024px)" srcset="img/galery_5_1024.jpg">
+			<img src="img/galery_5.jpg" alt="Картины, представленные в галлерее" class="galery-modal__img">
+		</picture>
+		<div class="galery-modal__block">
+			<button class="btn-reset galery-modal__close" data-modal-close="6"></button>
+			<h2 class="heading galery-modal__heading">Казимир Малевич</h2>
+			<span class="galery-modal__painting-name">«Супрематическая композиция»</span>
+			<span class="galery-modal__date">1915</span>
+			<p class="paragraph galery-modal__text">В «Супрематической композиции» цветные геометрические фигуры существуют в динамическом взаимодействии. Эти фигуры — прообразы всех форм в реальном мире. Они парят в белом безвоздушном пространстве, символизирующем бесконечную Вселенную. В картине нет сюжета, нет привычных точек опоры — верха и низа, а есть иная, сотворенная художником реальность, в которой действуют законы супрематического тяготения. Это идеальное мироздание.</p>
+		</div>
+	</div>
+
 	<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

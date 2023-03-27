@@ -1,9 +1,35 @@
 window.addEventListener('DOMContentLoaded', function() {
-
-  document.querySelector('.header-top__burger').addEventListener('click', function() {
-    document.querySelector('.header-top__nav').classList.toggle('open-menu'),
-    document.querySelector('.header-top__burger').classList.toggle('open-menu')
-  })
+  if (window.matchMedia("screen and (max-width: 576px)").matches) {
+    burgerMenu()
+  }
+  function burgerMenu() {
+    const burger = document.querySelector('.header-top__burger');
+    const menu = document.querySelector('.header-top__nav');
+    const menuItems = document.querySelectorAll('.header-top__item');
+    const overlay = document.querySelector('.overlay');
+  
+    burger.addEventListener('click', (e) => {
+      burger.classList.toggle('open-menu');
+      menu.classList.toggle('open-menu');
+      overlay.classList.toggle('is-active');
+    })
+  
+    overlay.addEventListener('click', () => {
+      burger.classList.remove('open-menu');
+      menu.classList.remove('open-menu');
+      overlay.classList.toggle('is-active');
+      enableScroll()
+    })
+  
+    menuItems.forEach(el => {
+      el.addEventListener('click', () => {
+        burger.classList.remove('open-menu');
+        menu.classList.remove('open-menu');
+        overlay.classList.toggle('is-active');
+        enableScroll()
+      })
+    })
+  }
 
   // search
 
@@ -113,7 +139,6 @@ window.addEventListener('DOMContentLoaded', function() {
     allowTouchMove: false,
     direction: 'horizontal',
     loop: true,
-    // effect: 'fade',
     autoplay: {
       delay: 5000,
     },
@@ -159,6 +184,39 @@ window.addEventListener('DOMContentLoaded', function() {
     },
   });
 
+  // galery modals
+
+  function openModal() {
+    const modalLink = document.querySelectorAll('.galery__swiper-slide')
+    const overlay = document.querySelector('.overlay')
+
+    modalLink.forEach(function(item) {
+      item.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const modalId = item.getAttribute('data-modal')
+        const modal = document.querySelector('.galery-modal[data-modal="' + modalId + '"]')
+        const closeModal = document.querySelector('.galery-modal__close[data-modal-close="' + modalId + '"]')
+
+
+        modal.classList.toggle('is-active')
+        overlay.classList.toggle('is-active')
+
+        closeModal.addEventListener('click', () => {
+          modal.classList.toggle('is-active')
+          overlay.classList.toggle('is-active')
+        })
+    
+        overlay.addEventListener('click', () => {
+          modal.classList.remove('is-active')
+          overlay.classList.remove('is-active')
+        })
+      })
+    })
+  }
+
+  openModal();
+
   // catalogue accordion
 
   $( function() {
@@ -173,10 +231,10 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.accordion__desc-btn').forEach(function(tabsBtn) {
     tabsBtn.addEventListener('click', function(event) {
       const path = event.currentTarget.dataset.path
-      document.querySelectorAll('.slider').forEach(function(tabContent) {
-        tabContent.classList.remove('slider--active')
+      document.querySelectorAll('.catalogue-desk__slider').forEach(function(tabContent) {
+        tabContent.classList.remove('catalogue-desk__slider--active')
       })
-      document.querySelector(`[data-target="${path}"]`).classList.add('slider--active')
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalogue-desk__slider--active')
     })
   });
 
@@ -207,6 +265,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     pagination: {
       el: '.events__pagination',
+      clickable: true,
     },
     navigation: {
       nextEl: '.events__next-btn',
@@ -223,20 +282,17 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // projects-swiper
 
-  var swiper = new Swiper('.js-partners-slider', {
+  var swiper = new Swiper('.projects-partners__slider', {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 50,
+    loop: true,
 
     breakpoints: {
-      441: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 50,
       },
-      611: {
-        slidesPerView: 2,
-        spaceBetween: 34,
-      },
-      1024: {
+      651: {
         slidesPerView: 2,
         spaceBetween: 50,
       },
@@ -246,32 +302,10 @@ window.addEventListener('DOMContentLoaded', function() {
       },
     },
     navigation: {
-      nextEl: '.js-partners-next',
-      prevEl: '.js-partners-prev',
+      nextEl: '.projects-partners__next-btn',
+      prevEl: '.projects-partners__prev-btn',
     },
   });
-
-  // var swiper = new Swiper('.projects__swiper-container', {
-  //   slidesPerView: 1,
-  //   spaceBetween: 50,
-
-  //   breakpoints: {
-  //     768: {
-  //       slidesPerView: 2,
-  //       slidesPerGroup: 2,
-  //       spaceBetween: 43,
-  //     },
-  //     1300: {
-  //       slidesPerView: 3,
-  //       slidesPerGroup: 3,
-  //       spaceBetween: 50,
-  //     },
-  //   },
-  //   navigation: {
-  //     nextEl: '.projects__next',
-  //     prevEl: '.projects__prev',
-  //   },
-  // });
 
   // form
 
